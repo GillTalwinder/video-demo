@@ -1,11 +1,14 @@
-import { useEffect, useRef, useState } from 'react';
-import { HOME_VIP_LAUNCH_MOBILE } from './asset';
+import { useRef, useState } from 'react';
 import './App.css';
+
+const videos = [
+  'http://techslides.com/demos/sample-videos/small.mp4',
+]
 
 function App() {
   const videoRef = useRef();
   const sourceRef = useRef();
-  const [videoUrl, setVideoUrl] = useState(HOME_VIP_LAUNCH_MOBILE);
+  const [videoUrl, setVideoUrl] = useState(videos[0]);
 
   const handlePlay = () => {
     videoRef.current.muted = true;
@@ -19,14 +22,6 @@ function App() {
 
   return (
     <>
-      <video 
-        ref={videoRef} 
-        muted 
-        loop={true} 
-        playsInline
-      >
-        <source ref={sourceRef}></source>
-      </video>
       <div className="App">
 
         <div className='input-wrapper'>
@@ -42,6 +37,15 @@ function App() {
           <p>{videoUrl}</p>
         </div>
       </div>
+
+      <video 
+        ref={videoRef} 
+        muted 
+        loop={true} 
+        playsInline
+      >
+        <source ref={sourceRef}></source>
+      </video>
     </>
   );
 }
