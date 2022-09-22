@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import './App.css';
 
 const videos = [
+  'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
   'http://techslides.com/demos/sample-videos/small.mp4',
 ]
 
@@ -30,11 +31,6 @@ function App() {
             onChange={(e) => { setVideoUrl(e.target.value) }}
           />
           <button onClick={handlePlay}>Play</button>
-        </div>
-
-        <div>
-          <p>Current video url:</p>
-          <p>{videoUrl}</p>
         </div>
       </div>
 

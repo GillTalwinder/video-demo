@@ -21,5 +21,14 @@ video {
 }
 
 .input-wrapper {
-  margin-top: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+input {
+  padding: 5px;
+  width: 70%;
 }
